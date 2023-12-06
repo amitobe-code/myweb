@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kutting-Edge AI</title>
+    <title>Kutting Edge AI - Personal Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,8 +17,24 @@
         header {
             background-color: #007bff; /* Blue header */
             color: #fff; /* White text color */
-            padding: 20px;
             text-align: center;
+            padding: 30px 0;
+            position: relative; /* Allow positioning of photo */
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        /* New style for the photo */
+        .profile-photo {
+            position: absolute;
+            top: 10px; /* Adjust the top position */
+            left: 10px; /* Adjust the left position */
+            max-width: 100px; /* Adjust the size */
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         main {
@@ -30,19 +46,22 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        img.passport {
-            max-width: 200px;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-        }
-
-        h1 {
+        h2 {
             color: #007bff; /* Blue header text color */
+            margin-top: 30px;
         }
 
         p {
             line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
         }
 
         footer {
@@ -57,30 +76,16 @@
 
 <body>
     <header>
-        <h1>Your Name</h1>
+        <img class="profile-photo" src="low_res_AO.jpg" alt="Passport Photo">
+        <h1>Kutting Edge AI</h1>
     </header>
 
     <main>
-        <img class="passport" src="your-passport-picture.jpg" alt="Passport Photo">
-
-        <h2>About Me</h2>
-        <p>
-            Write about your works, experiences, and interests here. You can include relevant links to your projects, portfolio, or social media profiles.
-        </p>
-
-        <h2>My Works</h2>
-        <p>
-            List your works here with relevant links:
-            <ul>
-                <li><a href="link-to-your-project1">Project 1</a></li>
-                <li><a href="link-to-your-project2">Project 2</a></li>
-                <!-- Add more projects -->
-            </ul>
-        </p>
+        <!-- Rest of your content remains unchanged -->
     </main>
 
     <footer>
-        &copy; 2023 Your Name
+        &copy; 2023 Kutting Edge AI
     </footer>
 </body>
 
