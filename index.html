@@ -31,7 +31,30 @@
             margin: 10px 0;
         }
 
-       
+       <style>
+        .blog-post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .blog-content {
+            display: none;
+        }
+
+        .expanded {
+            display: block;
+        }
+
+        .expand-button {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+
+</head>
+
+
 
 
         main {
@@ -102,6 +125,35 @@
 <p> One of the best explanations for the paper "Attention is all You Need  is explained <a href="https://www.youtube.com/watch?v=sznZ78HquPc"> here </a> </p>
 <section id="intro">
 <p> Comprehensive explanation on transformers for translation tasks is also available <a href="https://www.tensorflow.org/text/tutorials/transformer#:~:text=The%20Transformer%20starts%20by%20generating,represented%20by%20the%20filled%20balls"> here</a> </p>
+ <div class="blog-post">
+        <h2 class="expand-button">Post Title 1</h2>
+        <div class="blog-content">
+            <p>Content of Post 1 goes here...</p>
+            <p>More details and text...</p>
+        </div>
+    </div>
+
+    <div class="blog-post">
+        <h2 class="expand-button">Post Title 2</h2>
+        <div class="blog-content">
+            <p>Content of Post 2 goes here...</p>
+            <p>More details and text for Post 2...</p>
+        </div>
+    </div>
+
+    <!-- Add more blog posts as needed -->
+
+    <script>
+        const expandButtons = document.querySelectorAll('.expand-button');
+
+        expandButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                content.classList.toggle('expanded');
+            });
+        });
+    </script>
+    
 <h3>LLM Dilemma - the new Scientific Calculator (07 Dec 2023)</h3>
 
 <p> With the emergence of transformer architecture and homogenisation of this into Large Language Models, there has been a transformational change in the outlook of Generative AI and Artificial General Intelligence. Researchers, data scientists and industries are scrambling to commercialise and effectively leverage LLMs for increasing productivity. CEOs and top level managers are looking to cut costs by dehiring workforce which otherwise was being utilised for daily mundane chores. Low level developers are already threatened and signs of layoffs in the industry are visible.  
