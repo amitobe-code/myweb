@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Page</title>
+  <style>
+    .blog-preview {
+      margin-bottom: 20px;
+    }
+
+    .expand-btn {
+      background-color: #ddd;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .full-blog {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .full-blog p {
+      margin-top: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="blog-list">
+  <div class="blog-preview">
+    <h2>Title of Blog 1</h2>
+    <p>Short preview of Blog 1...</p>
+    <button class="expand-btn">Read More</button>
+    <div class="full-blog hidden">
+      <p>Full content of Blog 1...</p>
+    </div>
+  </div>
+
+  <div class="blog-preview">
+    <h2>Title of Blog 2</h2>
+    <p>Short preview of Blog 2...</p>
+    <button class="expand-btn">Read More</button>
+    <div class="full-blog hidden">
+      <p>Full content of Blog 2...</p>
+    </div>
+  </div>
+
+  <!-- More blog previews can be added similarly -->
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const expandBtns = document.querySelectorAll('.expand-btn');
+
+    expandBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const fullBlog = this.nextElementSibling;
+        fullBlog.classList.toggle('visible');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
